@@ -1,19 +1,20 @@
 {
   "name": "abi2schema",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "solidity abi to json schema",
-  "main": "index.js",
-  "directories": {
-    "test": "test"    
-  },
+  "main": "./dist/main.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "lint": "npx eslint . --fix",
     "test": "./node_modules/tape/bin/tape test.js | node_modules/.bin/tap-spec",
-    "build": "webpack"
+    "build": "webpack --mode=production",
+    "prepublishOnly": "build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sambacha/abi2schema.git"
+    "url": "git+https://github.com/gsgalloway/abi2schema.git"
   },
   "keywords": [
     "solidity",
@@ -26,9 +27,9 @@
   "author": "see contributors",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/sambacha/abi2schema/issues"
+    "url": "https://github.com/gsgalloway/abi2schema/issues"
   },
-  "homepage": "https://github.com/sambacha/abi2schema#readme",
+  "homepage": "https://github.com/gsgalloway/abi2schema#readme",
   "devDependencies": {
     "eslint": "^7.18.0",
     "openzeppelin-solidity": "^2.1.1",
