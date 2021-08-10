@@ -88,3 +88,17 @@ test("AllowanceCrowdsale", { objectPrintDepth: 20 }, function (t) {
 
   t.end();
 });
+
+test("Arrays", { objectPrintDepth: 20 }, function (t) {
+  const abi = require("./test/arrays-abi.json");
+  const expected = require('./test/arrays-expected-jsonschema.json');
+  const observed = convert(abi, {
+    as: "object",
+    for: "inputs",
+    name: "arraysTest"
+  })
+
+  t.deepEqual(observed, expected, "Understands array types in ABI");
+  
+  t.end();
+})

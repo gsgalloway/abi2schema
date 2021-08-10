@@ -1,0 +1,24 @@
+{
+    "type":"object",
+    "required":[
+       "addresses",
+       "ints"
+    ],
+    "properties":{
+       "addresses":{
+          "type":"array",
+          "items":{
+             "type":"string",
+             "pattern":"0x[a-fA-F0-9]{40}"
+          },
+          "description":"address[] addresses"
+       },
+       "ints":{
+          "type":"array",
+          "items":{
+             "type":"integer"
+          },
+          "description":"uint256[] ints"
+       }
+    }
+}

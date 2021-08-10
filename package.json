@@ -1,14 +1,15 @@
 {
   "name": "abi2schema",
   "version": "0.2.2",
-  "description": "solidity abit to json schema",
+  "description": "solidity abi to json schema",
   "main": "index.js",
   "directories": {
-    "test": "test"
+    "test": "test"    
   },
   "scripts": {
     "lint": "npx eslint . --fix",
-    "test": "./node_modules/tape/bin/tape test.js | node_modules/.bin/tap-spec"
+    "test": "./node_modules/tape/bin/tape test.js | node_modules/.bin/tap-spec",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -32,7 +33,9 @@
     "eslint": "^7.18.0",
     "openzeppelin-solidity": "^2.1.1",
     "tap-spec": "^5.0.0",
-    "tape": "^5.1.1"
+    "tape": "^5.1.1",
+    "webpack": "^5.50.0",
+    "webpack-cli": "^4.7.2"
   },
   "dependencies": {
     "merge": "^2.1.0"

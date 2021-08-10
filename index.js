@@ -43,6 +43,10 @@ const types = {
   string: {
     type: "string",
   },
+
+  array: {
+    type: "array"
+  },
 };
 
 const typesRegex = {
@@ -54,6 +58,11 @@ const typesRegex = {
 };
 
 function mapType(type) {
+  if (type.endsWith(']')) {
+    const withoutArray = type.substr(0, type.indexOf('['));
+    const itemType = mapType(withoutArray);
+    return merge(true, types.array, {items: itemType});
+  }
   const mapped = types[type];
   if (mapped) {
     return merge(true, mapped);

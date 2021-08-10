@@ -1,0 +1,19 @@
+[
+   {
+      "constant":false,
+      "inputs":[
+         {
+            "name":"addresses",
+            "type":"address[]"
+         },
+         {
+            "name":"ints",
+            "type":"uint256[]"
+         }
+      ],
+      "name":"arraysTest",
+      "outputs":[],
+      "payable":false,
+      "type":"function"
+   }
+]
